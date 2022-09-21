@@ -30,6 +30,8 @@ Source:         %{gosource}
 %prep
 %goprep
 sed -i -e 's/Init(new(JibberJabberDetector))/DEFAULT_LOCALE/' wski18n/i18n.go
+sed -i -e 's/detector Detector//' wski18n/i18n.go
+sed -i -e 's/Locale(detector)/DEFAULT_LOCALE/' wski18n/i18n.go
 rm wski18n/detection.go
 
 %generate_buildrequires
