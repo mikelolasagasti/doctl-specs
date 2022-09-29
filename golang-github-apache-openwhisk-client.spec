@@ -29,6 +29,10 @@ Source:         %{gosource}
 
 %prep
 %goprep
+# Remove dependency on deprecated JibberJabberDetector
+# JibberJabberDetector was meant to be use for Locale detection, but code
+# is not complete, as always returns DEFAULT_LOCALE
+# https://github.com/apache/openwhisk-client-go/blob/master/wski18n/i18n.go#L65
 sed -i -e 's/Init(new(JibberJabberDetector))/DEFAULT_LOCALE/' wski18n/i18n.go
 sed -i -e 's/detector Detector//' wski18n/i18n.go
 sed -i -e 's/Locale(detector)/DEFAULT_LOCALE/' wski18n/i18n.go
