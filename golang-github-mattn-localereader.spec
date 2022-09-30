@@ -27,6 +27,7 @@ Source:         %{gosource}
 
 %prep
 %goprep
+sed -i -e '13,28d' localereader_test.go
 
 %generate_buildrequires
 %go_generate_buildrequires
@@ -36,11 +37,6 @@ Source:         %{gosource}
 
 %if %{with check}
 %check
-# TestDecoder should be tested only on Windows
-for test in "TestDecoder"\
-; do
-awk -i inplace '/^func.*'"$test"'\(/ { print; print "\tt.Skip(\"disabled failing test\")"; next}1' $(grep -rl $test)
-done
 %gocheck
 %endif
 
