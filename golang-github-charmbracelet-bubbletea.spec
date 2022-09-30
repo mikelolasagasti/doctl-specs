@@ -28,6 +28,8 @@ Source:         %{gosource}
 
 %prep
 %goprep
+# Remove to avoid extra deps
+rm -rf examples tutorials
 
 %generate_buildrequires
 %go_generate_buildrequires
