@@ -23,6 +23,8 @@ License:        MIT
 URL:            %{gourl}
 Source:         %{gosource}
 
+BuildRequires:  golang(github.com/kylelemons/godebug)
+
 %description %{common_description}
 
 %gopkg
