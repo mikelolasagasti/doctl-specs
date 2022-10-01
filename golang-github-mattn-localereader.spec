@@ -28,7 +28,6 @@ Source:         %{gosource}
 %prep
 %goprep
 # TestDecoder should be only tested on Windows
-# temporary hack
 sed -i -e '4d;5d;7d;10d;13,28d' localereader_test.go
 
 %generate_buildrequires
