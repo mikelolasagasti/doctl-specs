@@ -23,7 +23,7 @@ License:        MIT
 URL:            %{gourl}
 Source:         %{gosource}
 
-BuildRequires:  golang(github.com/kylelemons/godebug)
+BuildRequires:  golang(github.com/kylelemons/godebug/pretty)
 
 %description %{common_description}
 
