@@ -5,6 +5,7 @@
 # https://github.com/erikgeiser/promptkit
 %global goipath         github.com/erikgeiser/promptkit
 Version:                0.7.0
+%global commit          1f33bc73d091f90faf118ee5ab5d85cb6474ca7c
 
 %gometa -f
 
