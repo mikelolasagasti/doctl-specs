@@ -44,9 +44,9 @@ export LDFLAGS="-X github.com/digitalocean/doctl.Major=%{major}  \
                 -X github.com/digitalocean/doctl.Label=Fedora"
 %gobuild -o %{gobuilddir}/bin/%{name} %{goipath}/cmd/%{name}
 
-%{gobuilddir}/cmd/%{name} completion bash > %{name}.bash
-%{gobuilddir}/cmd/%{name} completion fish > %{name}.fish
-%{gobuilddir}/cmd/%{name} completion zsh  > %{name}.zsh
+%{gobuilddir}/bin/%{name} completion bash > %{name}.bash
+%{gobuilddir}/bin/%{name} completion fish > %{name}.fish
+%{gobuilddir}/bin/%{name} completion zsh  > %{name}.zsh
 
 %install
 %gopkginstall
