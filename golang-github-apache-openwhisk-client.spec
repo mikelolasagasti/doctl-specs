@@ -5,7 +5,7 @@
 # https://github.com/apache/openwhisk-client-go
 %global goipath         github.com/apache/openwhisk-client-go
 Version:                1.2.0
-%global tag             1.2.0
+#%%global tag             1.2.0
 %global commit          18a6a867dd6fe81ad60ebb4dc65eb284e98ca9df
 
 %gometa -f
